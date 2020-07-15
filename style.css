@@ -1,0 +1,107 @@
+:root{
+    /* --red:; 
+    --black:;
+    --blue:;
+    --white:;  sirve para establecer una paleta de colores y llamarlos como variables con la estructura https://colorhunt.co/*/
+    --blue:#1eb2a6;
+    --black: #020000cb;
+    --orange:#ffa34d;
+    --peach:#f67575;
+    --aqua:#d4f8e8;
+}
+
+
+*{/* Es un elemento universal de css para que hacer que los margins y los paddings se vean igual en todos los browsers The * means "all elements" (a universal selector) https://stackoverflow.com/questions/8715860/what-does-mean-in-css*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{/* para establecer la forma del cuerpo de la pagina primero se establece los parametros de medicion de la pagina en la etiqueta body*/
+     
+    background-color:#fff; 
+    overflow-x: hidden;/* propiedad que indica que hacer con el contenido que queda fuera de las medidas(w,h) de la clase o etiqueta seleccionada, si es hidden, eliminara de la pag, el contenido que quede por fuera */
+    font-family: 'Raleway', sans-serif;
+}
+
+ /* ------mainNav-----  */
+#header{
+    position: relative;/*reserva un espacio asignado al header para que no se empalmen o desplace al momento de hacer flex-box y mantiene su punto de referencia*/
+    /*top y left tienen preferencia sobre right y bottom*/
+    width: 100%;
+}
+
+.menu{
+    position:fixed;/* se ajusta al contenido de header y ya no en toda la fila*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background:#fff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999; /*orden de apilamiento de las box es decir agregar una encima de otro como en el ejemplo de las la pagina de tu banda fav*/  
+}
+.menu .logo{
+
+    margin-left: 20px; 
+    /* 60px */
+}
+
+ .menu .logo h1 a{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .list-menu{
+    margin-right: 20px;
+}
+
+.menu .list-menu .lists{ /*para acomodar la lista en fila*/
+    display: flex;
+}
+
+.menu .list-menu .lists li{ /*para quitar las viñetas de la lista*/
+    list-style: none;
+}
+
+.menu .list-menu .lists li a{ /*estilos del menu*/
+    text-decoration: none;
+    margin: 0px 10 px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.menu .list-menu .lists li a.active{/*poner el fondo verde y "activar" los botones para hover*/
+    background: var(--blue);
+    color: #fff;
+}
+
+ .menu .list-menu .lists li a:hover{
+    background: var(--blue);
+    color: #fff;
+}
+
+#btn-menu{
+    display: none;
+}    
+
+/* ------Fin-mainNav-----  */
+
+/* -----imgHeader------ */
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../Big_Chair/assets/friendsbeach.jpg);/*estructura para llamar imgs en assets*/
+    background-attachment: fixed;/*indica el "movimiento" que tendra la imagen "pegada" al fondo de la pag*/
+    background-position: center;/*indica la ubicacion que llevara la img en el fondo de la pag*/
+    background-size: cover;/*para funcion responsive y adaptacion al diferenes tamaños*/
+}
