@@ -6,6 +6,8 @@
     <title>Big Chair | Inicio</title>
 
     <!-- Estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- fuentes de google -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -138,24 +140,24 @@
                 <hr>
             </div>
             <div class="form-content">
-                <form id="formulario">
+                <form id="formulario" action="">
                     <label for="user">Nombre</label>
                     <input type="text" id="user" name="user" placeholder="Ingresa tu nombre">
 
-                    <label for="user">Si una persona quiere, puede ser feliz en casi cualquier circunstancia</label>
-                    <input type="text" id="user" name="user" placeholder="Ingresa tu nombre">
+                    <label for="react1">No puedo soportar correr riesgos</label>
+                    <input type="react1" id="react1" name="react1" placeholder="Responde si o no">
 
-                    <label for="user">Es casi imposible superar la influencia del pasado</label>
-                    <input type="text" id="user" name="user" placeholder="Ingresa tu nombre">
+                    <label for="react2">Hay determinadas personas de las que dependo mucho</label>
+                    <input type="react2" id="react2" name="react2" placeholder="Responde si o no">
 
-                    <label for="user">Yo provoco mi propio mal humor</label>
-                    <input type="text" id="user" name="user" placeholder="Ingresa tu nombre">
+                    <label for="react3">Yo provoco mi propio mal humor</label>
+                    <input type="react3" id="react3" name="react3" placeholder="Responde si o no">
 
-                    <label for="user">Me gusta valerme por mi mismo</label>
-                    <input type="text" id="user" name="user" placeholder="Ingresa tu nombre">
+                    <label for="react4">Me gusta valerme por mi mismo</label>
+                    <input type="react4" id="react4" name="react4" placeholder="Responde si o no">
 
-                    <label for="user">Basicamente, la gente nunca cambia</label>
-                    <input type="text" id="user" name="user" placeholder="Ingresa tu nombre">
+                    <label for="react5">Basicamente, la gente nunca cambia</label>
+                    <input type="react5" id="react5" name="react5" placeholder="Respone si o no">
 
                     <label for="email">Correo Electronico</label>
                     <input type="email" id="email" name="email" placeholder="Ingresa tu correo">
@@ -163,7 +165,34 @@
                     <label for="message">Tu Mensaje</label>
                     <textarea name="message" id="message"></textarea>
                     
-                    <div class="send"><button>Enviar</button></div>
+                    <!--<div class="send"><button>Enviar</button></div>-->
+
+                    <button type="button" class="btn btn-primary send" data-toggle="modal" data-target="#exampleModal">
+                        Enviar
+                      </button>
+
+                      <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Agregar titulo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                            <p>
+                                Datos Guardados!
+                            </p>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                            
+                            </div>
+                        </div>
+                        </div>
+                    </div>
 
                     <div class="message-form">
                         <p>* Escribe si o no en todos los reactivos y añade un comentario si tienes algo mas que decirnos.</p>
@@ -180,7 +209,16 @@
 </footer>
 
 <!-- scripts -->
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="./main.js"></script>
+<script>
+    $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 
 </body>
 </html>

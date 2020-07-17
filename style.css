@@ -32,7 +32,7 @@ body{/* para establecer la forma del cuerpo de la pagina primero se establece lo
 }
 
 .menu{
-    position:fixed;/* se ajusta al contenido de header y ya no en toda la fila*/
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -482,14 +482,14 @@ border: 2px solid var(--orange);
 }
 
 .footer .footer-content .form-content #formulario .send{
-    width: 100%;
+    /*width: 100%;*/
     display: flex;
     justify-content: center;
     margin: 35px 0px;
 }
 
 .footer .footer-content .form-content #formulario .send button{
-    width: 150px;
+    /*width: 150px;*/
     height: 40px;
     background: var(--blue);
     border-radius: 25px;
@@ -529,3 +529,12 @@ border: 2px solid var(--orange);
     color: #fff;
     font-size: 20px;
 } 
+
+.btn-primary {
+    background-color: #1eb2a6;
+    border-color: #1eb2a6;
+}
+
+.btn-primary:hover {
+    background-color: blue;
+}
